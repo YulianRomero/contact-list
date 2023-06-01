@@ -55,3 +55,12 @@ agregarContacto(
     borrarContacto(2);
     // imprimir lista actualizada
     imprimirContactos();
+    // buscar contacto de la lista y actualizarlo
+ function actualizarContacto(id,nuevoNombre,nuevoApellido,nuevoTelefono,){
+    //buscamos el indice del objeto en el array usando finIndex
+    const index = listaContactos.findIndex(contacto => contacto.nombre === nombre);
+    if (index !== -1){
+        //eliminamos el contacto de la lista usando splice
+        listaContactos.splice(index, 1);
+    }
+ }
